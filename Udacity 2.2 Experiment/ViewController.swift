@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var experimentButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +23,23 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func loadNextScreen(){
+        
+        let image = UIImage()
+        let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+        /* initial exercise where we accessed the camera picker
+
+        let nextViewController = UIImagePickerController()
+        
+        self.presentViewController(nextViewController, animated: true, completion: nil)
+
+        */
+
+
+    }
+    
 }
 
